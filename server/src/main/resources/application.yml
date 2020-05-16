@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: server
+  datasource:
+    url: jdbc:mysql://localhost:3306/eurc?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: eurc
+    password: eurc
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  mapper-locations: classpath*:mapper/**.xml
