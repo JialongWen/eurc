@@ -2,6 +2,7 @@ package com.wjl.system.controller;
 
 import com.wjl.server.mapper.TestMapper;
 import com.wjl.server.model.Test;
+import com.wjl.server.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,12 +14,12 @@ import java.util.List;
 public class HelloController {
 
     @Autowired
-    private TestMapper testMapper;
+    private TestService testService;
 
 
     @GetMapping("sayhello")
     public List<Test> sayHell() {
-        List<Test> list = testMapper.list();
+        List<Test> list = testService.list();
         return list;
     }
 
